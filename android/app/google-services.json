@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "446224228641",
+    "firebase_url": "https://covid-peru.firebaseio.com",
+    "project_id": "covid-peru",
+    "storage_bucket": "covid-peru.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446224228641:android:5d449b357c44c760d91e60",
+        "android_client_info": {
+          "package_name": "com.edwin.covidperu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446224228641-u2d7iobgum8dnq0si9kl1tfa8l7p3dut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAkWVniTAqSqmQXuZ4IvXy3TANpglMuFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446224228641-u2d7iobgum8dnq0si9kl1tfa8l7p3dut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
