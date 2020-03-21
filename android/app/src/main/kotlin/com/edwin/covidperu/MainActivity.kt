@@ -1,4 +1,4 @@
-package com.example.covid_peru_project
+package com.edwin.covidperu
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
