@@ -1,5 +1,5 @@
-import 'package:covid_peru_project/screens/covid_form.screen.dart';
-import 'package:covid_peru_project/screens/covid_map.screen.dart';
+import 'package:covid_peru_project/ui/screens/covid_form.screen.dart';
+import 'package:covid_peru_project/ui/screens/map/map.screen.dart';
 import 'package:flutter/material.dart';
 
 class CovidHome extends StatefulWidget {
@@ -27,7 +27,7 @@ class _CovidHomeState extends State<CovidHome>
 
 
     final _kTabPages = <Widget>[
-      CovidMapScreen(),
+      MapScreen(),
       CovidFormScreen()
     ];
 
