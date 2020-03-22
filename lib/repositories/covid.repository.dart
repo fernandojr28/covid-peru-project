@@ -5,15 +5,23 @@ import 'package:covid_peru_project/models/summary.model.dart';
 import 'package:covid_peru_project/repositories/covid_api_client.dart';
 
 class CovidRepository {
-  final CovidApiClient covidApiClient;
+  final CovidApiClient covidApiClient = CovidApiClient();
 
-  CovidRepository(this.covidApiClient);
+  CovidRepository();
 
   Future<Summary> summary() async {
     return await covidApiClient.summary();
   }
 
-  Future<List<Country>> deaths() async {
+  Future<DeathsInWorld> deaths() async {
     return await covidApiClient.deaths();
+  }
+
+  Future<RecoveredInWorld> recovered() async {
+    return await covidApiClient.recovered();
+  }
+
+  Future<ConfirmedInWorld> confirmed() async {
+    return await covidApiClient.confirmed();
   }
 }

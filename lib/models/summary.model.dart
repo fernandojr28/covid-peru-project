@@ -12,7 +12,6 @@ class Summary {
     int confirmed;
     int recovered;
     int deaths;
-    String dailySummary;
     String image;
     DateTime lastUpdate;
 
@@ -20,7 +19,6 @@ class Summary {
         this.confirmed,
         this.recovered,
         this.deaths,
-        this.dailySummary,
         this.image,
         this.lastUpdate,
     });
@@ -29,7 +27,6 @@ class Summary {
         confirmed: json["confirmed"]['value'],
         recovered: json["recovered"]['value'],
         deaths: json["deaths"]['value'],
-        dailySummary: json["dailySummary"],
         image: json["image"],
         lastUpdate: DateTime.parse(json["lastUpdate"]),
     );
@@ -38,7 +35,6 @@ class Summary {
         "confirmed": confirmed,
         "recovered": recovered,
         "deaths": deaths,
-        "dailySummary": dailySummary,
         "image": image,
         "lastUpdate": lastUpdate.toIso8601String(),
     };

@@ -11,9 +11,8 @@ class CovidHome extends StatefulWidget {
 
 //#02c6c1
 
-class _CovidHomeState extends State<CovidHome> 
-  with SingleTickerProviderStateMixin{
-
+class _CovidHomeState extends State<CovidHome>
+    with SingleTickerProviderStateMixin {
   TabController _tabController;
 
   @override
@@ -24,39 +23,34 @@ class _CovidHomeState extends State<CovidHome>
 
   @override
   Widget build(BuildContext context) {
-
-
-    final _kTabPages = <Widget>[
-      MapScreen(),
-      CovidFormScreen()
-    ];
+    final _kTabPages = <Widget>[MapScreen(), CovidFormScreen()];
 
     final _kTabs = <Tab>[
       Tab(icon: new Icon(Icons.map)),
       Tab(icon: new Icon(Icons.book))
     ];
 
-
-
     return Scaffold(
-     
-     backgroundColor:  Color(0xf0d32d32),
-     body: TabBarView(
+      backgroundColor: Color(0xf0d32d32),
+      body: TabBarView(
         controller: _tabController,
         children: _kTabPages,
       ),
-      
       bottomNavigationBar: Container(
         color: Colors.white,
-        child: new TabBar(
-          controller: _tabController,
-          tabs: _kTabs,
-          labelColor: Color(0xf0d32d32),
-          unselectedLabelColor: Colors.black,
-          indicatorSize: TabBarIndicatorSize.label,
-          indicatorPadding: EdgeInsets.all(5.0),
-          indicatorColor: Colors.red,
-        ),
+        child: MapScreen()
+        
+        
+        // new TabBar(
+        //   isScrollable: false,
+        //   controller: _tabController,
+        //   tabs: _kTabs,
+        //   labelColor: Color(0xf0d32d32),
+        //   unselectedLabelColor: Colors.black,
+        //   indicatorSize: TabBarIndicatorSize.label,
+        //   indicatorPadding: EdgeInsets.all(5.0),
+        //   indicatorColor: Colors.red,
+        // ),
       ),
     );
   }
