@@ -38,19 +38,20 @@ class _CovidHomeState extends State<CovidHome>
       ),
       bottomNavigationBar: Container(
         color: Colors.white,
-        child: MapScreen()
-        
-        
-        // new TabBar(
-        //   isScrollable: false,
-        //   controller: _tabController,
-        //   tabs: _kTabs,
-        //   labelColor: Color(0xf0d32d32),
-        //   unselectedLabelColor: Colors.black,
-        //   indicatorSize: TabBarIndicatorSize.label,
-        //   indicatorPadding: EdgeInsets.all(5.0),
-        //   indicatorColor: Colors.red,
-        // ),
+        child:
+
+            // CovidFormScreen()
+
+            new TabBar(
+          isScrollable: false,
+          controller: _tabController,
+          tabs: _kTabs,
+          labelColor: Color(0xf0d32d32),
+          unselectedLabelColor: Colors.black,
+          indicatorSize: TabBarIndicatorSize.label,
+          indicatorPadding: EdgeInsets.all(5.0),
+          indicatorColor: Colors.red,
+        ),
       ),
     );
   }
