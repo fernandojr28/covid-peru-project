@@ -1,5 +1,5 @@
-import 'package:covid_peru_project/screens/covid_form.screen.dart';
-import 'package:covid_peru_project/screens/covid_map.screen.dart';
+import 'package:covid_peru_project/ui/components/screens/covid_form.screen.dart';
+import 'package:covid_peru_project/ui/components//screens/covid_map.screen.dart';
 import 'package:flutter/material.dart';
 
 class CovidHome extends StatefulWidget {
@@ -39,9 +39,9 @@ class _CovidHomeState extends State<CovidHome>
 
 
     return Scaffold(
-     
-     backgroundColor:  Color(0xf0d32d32),
+    //  backgroundColor:  Color(0xf0d32d32),
      body: TabBarView(
+        // dragStartBehavior: DragStartBehavior.down,
         controller: _tabController,
         children: _kTabPages,
       ),
@@ -50,6 +50,7 @@ class _CovidHomeState extends State<CovidHome>
         color: Colors.white,
         child: new TabBar(
           controller: _tabController,
+          isScrollable: false,
           tabs: _kTabs,
           labelColor: Color(0xf0d32d32),
           unselectedLabelColor: Colors.black,

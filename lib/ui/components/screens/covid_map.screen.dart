@@ -12,7 +12,14 @@ class _CovidMapScreenState extends State<CovidMapScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-       child: Center(child: Icon(Icons.map, size: 64.0, color: Colors.white)),
+      color: Color(0xf0d32d32),
+      child: Center(
+        child: FlatButton(
+          child: Text('¿Ya tienes cuenta? Login'),
+          onPressed: ()=> Navigator.pushReplacementNamed(context, 'registro'),
+        ),
+      ),
+      //  child: Center(child: Icon(Icons.map, size: 64.0, color: Colors.white)),
     );
   }
 }
