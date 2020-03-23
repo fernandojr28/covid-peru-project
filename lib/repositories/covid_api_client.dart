@@ -20,7 +20,7 @@ class CovidApiClient {
     return Summary.fromJson(json);
   }
 
-  Future<List<Country>> deaths() async {
+  Future<DeathsInWorld> deaths() async {
     String url = "${_baseUrl}deaths";
     final response = await http.get(url);
 
@@ -29,13 +29,30 @@ class CovidApiClient {
     }
 
     final json = jsonDecode(response.body);
+    return DeathsInWorld.fromJson(json);
+  }
 
-    List<Country> list = [];
+  Future<ConfirmedInWorld> confirmed() async {
+    String url = "${_baseUrl}confirmed";
+    final response = await http.get(url);
 
-    for (var item in json) {
-      list.add(Country.fromJson(item));
+    if (response.statusCode != 200) {
+      throw new Exception('error getting quotes');
     }
 
-    return list;
+    final json = jsonDecode(response.body);
+    return ConfirmedInWorld.fromJson(json);
+  }
+
+  Future<RecoveredInWorld> recovered() async {
+    String url = "${_baseUrl}recovered";
+    final response = await http.get(url);
+
+    if (response.statusCode != 200) {
+      throw new Exception('error getting quotes');
+    }
+
+    final json = jsonDecode(response.body);
+    return RecoveredInWorld.fromJson(json);
   }
 }

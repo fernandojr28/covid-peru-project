@@ -75,3 +75,45 @@ class Country {
         "iso3": iso3,
       };
 }
+
+class DeathsInWorld {
+  List<Country> countries;
+
+  DeathsInWorld({this.countries});
+
+  factory DeathsInWorld.fromJson(dynamic json) {
+    List<Country> countries = [];
+    for (var item in json) {
+      countries.add(Country.fromJson(item));
+    }
+    return DeathsInWorld(countries: countries);
+  }
+}
+
+class RecoveredInWorld {
+  List<Country> countries;
+
+  RecoveredInWorld({this.countries});
+
+  factory RecoveredInWorld.fromJson(dynamic json) {
+    List<Country> countries = [];
+    for (var item in json) {
+      countries.add(Country.fromJson(item));
+    }
+    return RecoveredInWorld(countries: countries);
+  }
+}
+
+class ConfirmedInWorld {
+  List<Country> countries;
+
+  ConfirmedInWorld({this.countries});
+
+  factory ConfirmedInWorld.fromJson(dynamic json) {
+    List<Country> countries = [];
+    for (var item in json) {
+      countries.add(Country.fromJson(item));
+    }
+    return ConfirmedInWorld(countries: countries);
+  }
+}
